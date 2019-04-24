@@ -5,5 +5,8 @@
 5. Run script: `$ python main.py --folder=path_to_folder --layout=path_to_layout`  
 E.g. :   
 Absolute path: `$ python main.py --folder=/home/user/handlr/to_label --layout=/home/user/handlr/P45.json`  
-Relative path: `$ python main.py --folder=to_label --layout=P45.json`
-6. If you want to try experimental plate recognition to text instead of 5. run:  `$ python main.py --folder=path_to_folder --layout=path_to_layout --plate_text=True`   
+Relative path(folder and layout files are in the same folder with script): `$ python main.py --folder=to_label --layout=P45.json`
+6. If you want to try experimental plate recognition to text instead of 5. run:  `$ python main.py --folder=path_to_folder --layout=path_to_layout --plate_text=True`  
+7. Go to the new `labeled` folder    
+
+**P.S.** For demonstration purposes you can go and see results I got on my PC in `demo_results` folder
