@@ -1,5 +1,5 @@
 from argparse import ArgumentParser
-from typing import Tuple
+from typing import Tuple, List
 from numpy import ndarray
 
 
@@ -42,7 +42,7 @@ def get_pic_folder(pic_filename: str) -> str:
     return pic_filename.split('.')[0]
 
 
-def rel_coords_to_abs(rel_coords: list, pic_width: int, pic_height: int) -> list:
+def rel_coords_to_abs(rel_coords: list, pic_width: float, pic_height: float) -> list:
     """
     Given relative coordinates turn them into absolute by multiplying on width & height
     Example:
@@ -57,7 +57,7 @@ def rel_coords_to_abs(rel_coords: list, pic_width: int, pic_height: int) -> list
     return [[int(relative_coord[0] * pic_width), int(relative_coord[1] * pic_height)] for relative_coord in rel_coords]
 
 
-def crop_plate(cv_img: ndarray, top_left_coord: int, bottom_right_coord: int) -> ndarray:
+def crop_plate(cv_img: ndarray, top_left_coord: List[int, int], bottom_right_coord: List[int, int]) -> ndarray:
     """
     Given open cv image return cropped image of car plate
     """
